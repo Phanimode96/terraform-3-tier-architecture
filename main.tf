@@ -176,7 +176,7 @@ resource "aws_instance" "appserver1" {
 }
 
 resource "aws_instance" "appserver2" {
-  ami                    = "ami-0d5eff06f840b45e9"
+  ami                    = "ami-0440d3b780d96b29d"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1b"
   key_name               = "nvj"
