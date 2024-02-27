@@ -164,10 +164,10 @@ resource "aws_instance" "webserver2" {
 
 #Create EC2 Instance
 resource "aws_instance" "appserver1" {
-  ami                    = "ami-0d5eff06f840b45e9"
+  ami                    = "ami-0440d3b780d96b29d"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "nvj"
+  key_name               = "lb"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-1.id
   tags = {
@@ -179,7 +179,7 @@ resource "aws_instance" "appserver2" {
   ami                    = "ami-0440d3b780d96b29d"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1b"
-  key_name               = "nvj"
+  key_name               = "lb"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-2.id
 
